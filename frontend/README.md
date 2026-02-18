@@ -1,16 +1,61 @@
-# React + Vite
+# React Book Project 📚
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern book search application built with **React** and **Vite**, utilizing the **Google Books API**.
 
-Currently, two official plugins are available:
+## Features ✨
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Search Books**: Find books by title, author, or keywords.
+- **Popular Books**: Automatically valid popular books on load.
+- **Favorites System**: Save your favorite books (persisted locally).
+- **Responsive Design**: Works on desktop and mobile.
 
-## React Compiler
+## Tech Stack 🛠️
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend**: React, Vite
+- **Styling**: Vanilla CSS (Responsive Grid)
+- **State Management**: Context API (`BookContext`)
+- **API**: Google Books API
 
-## Expanding the ESLint configuration
+## Setup & Installation 🚀
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1.  **Clone the repository**:
+
+    ```bash
+    git clone https://github.com/YOUR_USERNAME/react-book-project.git
+    cd react-book-project/frontend
+    ```
+
+2.  **Install Dependencies**:
+
+    ```bash
+    npm install
+    ```
+
+3.  **Configure API Key**:
+    - Get a free API key from [Google Cloud Console](https://console.cloud.google.com/apis/credentials).
+    - Create a `.env` file in the `frontend` folder.
+    - Add your key:
+      ```env
+      VITE_GOOGLE_BOOKS_API_KEY=YOUR_API_KEY_HERE
+      ```
+
+4.  **Run the App**:
+    ```bash
+    npm run dev
+    ```
+
+## Project Structure 📂
+
+```
+frontend/
+├── src/
+│   ├── components/   # Reusable UI components (BookCard, NavBar)
+│   ├── contexts/     # State management (BookContext)
+│   ├── css/          # Stylesheets
+│   ├── pages/        # Page views (Home, Favorites)
+│   ├── services/     # API integration (api.js)
+│   ├── App.jsx       # Main application component
+│   └── main.jsx      # Entry point
+├── .env              # Environment variables
+└── package.json      # Dependencies
+```
